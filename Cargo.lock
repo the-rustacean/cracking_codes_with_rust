@@ -7,6 +7,10 @@ name = "the_caesar_cipher"
 version = "0.1.0"
 
 [[package]]
+name = "the_caesar_cipher_hacking"
+version = "0.1.0"
+
+[[package]]
 name = "the_reverse_cipher"
 version = "0.1.0"
 

@@ -13,6 +13,7 @@ fn main() {
     let mut translated = String::new();
 
     for symbol in message.chars() {
+
         match SYMBOLS.find(symbol) {
             Some(index) => {
 
