@@ -17,3 +17,7 @@ version = "0.1.0"
 [[package]]
 name = "the_reverse_cipher_input"
 version = "0.1.0"
+
+[[package]]
+name = "the_transposition_cipher"
+version = "0.1.0"
