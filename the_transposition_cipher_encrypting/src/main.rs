@@ -3,9 +3,9 @@ fn main() {
 
     let key = 8;
 
-    let ciphertext = encrypt_message(key, message);
+    let cipher_text = encrypt_message(key, message);
 
-    println!("{}|", ciphertext);
+    println!("{}|", cipher_text);
 }
 
 fn encrypt_message(key: usize, message: &str) -> String {
