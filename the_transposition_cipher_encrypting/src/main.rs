@@ -22,7 +22,6 @@ fn encrypt_message(key: usize, message: &str) -> String {
             current_index = current_index + key;
         }
 
-        // println!("{}", column_text);
         cipher_text.push(column_text);
     }
 
