@@ -21,7 +21,7 @@ fn main() {
         bytes.shuffle(&mut rng);
         let str = String::from_utf8(bytes).unwrap();
 
-        println!("Test #{}: {}", test_number, &str[..50]);
+        println!("Test #{:0>2}: {}...", test_number, &str[..50]);
 
         let max_key = str.len() / 2;
 
