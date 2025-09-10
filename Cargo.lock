@@ -123,16 +123,11 @@ dependencies = [
 ]
 
 [[package]]
-name = "the_transposition_cipher_decrypting"
-version = "0.1.0"
-
-[[package]]
-name = "the_transposition_cipher_encrypting"
-version = "0.1.0"
-
-[[package]]
 name = "the_transposition_cipher_file"
 version = "0.1.0"
+dependencies = [
+ "the_transposition_cipher",
+]
 
 [[package]]
 name = "unicode-ident"

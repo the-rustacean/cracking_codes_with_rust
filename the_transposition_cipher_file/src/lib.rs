@@ -1,13 +1,15 @@
 use std::error::Error;
 use std::fs;
 
+use the_transposition_cipher;
+
 pub enum Mode {
     Encrypt,
     Decrypt,
 }
 
 pub struct Config {
-    pub key: i32,
+    pub key: usize,
     pub mode: Mode,
     pub file_path: String,
 }
@@ -18,7 +20,7 @@ impl Config {
            return Err("not enough arguments");
         }
 
-        let key: i32 = args[1].trim().parse().expect("Please type a number");
+        let key: usize = args[1].trim().parse().expect("Please type a number");
 
         let mode = if args[2] == "encoding" {
             Mode::Encrypt
@@ -44,13 +46,11 @@ pub fn run(config: Config) -> Result<(), Box<dyn Error>> {
     let content = fs::read_to_string(config.file_path)?;
 
     let translated = match config.mode {
-        Mode::Encrypt => {},
-        Mode::Decrypt => {},
-    }
+        Mode::Encrypt => the_transposition_cipher::encrypt_message(config.key, &content),
+        Mode::Decrypt => the_transposition_cipher::decrypt_message(config.key, &content),
+    };
 
-}
+    println!("{translated}");
 
-
-pub fn translate_message(key: i32, content: &str) {
-
+    Ok(())
 }

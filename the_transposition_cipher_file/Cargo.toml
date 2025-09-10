@@ -4,3 +4,4 @@ version = "0.1.0"
 edition = "2024"
 
 [dependencies]
+the_transposition_cipher = { path = "../the_transposition_cipher" }

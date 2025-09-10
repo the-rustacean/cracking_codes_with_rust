@@ -1,3 +1,10 @@
 [workspace]
 resolver = "3"
-members = [ "the_caesar_cipher", "the_reverse_cipher_input","the_reverse_cipher", "the_caesar_cipher_hacking", "the_transposition_cipher_encrypting", "the_transposition_cipher_decrypting", "the_transposition_cipher", "the_transposition_cipher_file"]
+members = [
+    "the_caesar_cipher",
+    "the_reverse_cipher_input",
+    "the_reverse_cipher",
+    "the_caesar_cipher_hacking",
+    "the_transposition_cipher",
+    "the_transposition_cipher_file"
+]
