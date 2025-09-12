@@ -46,8 +46,8 @@ pub fn run(config: Config) -> Result<(), Box<dyn Error>> {
     let content = fs::read_to_string(config.file_path)?;
 
     let translated = match config.mode {
-        Mode::Encrypt => the_transposition_cipher::encrypt_message(config.key, &content),
-        Mode::Decrypt => the_transposition_cipher::decrypt_message(config.key, &content),
+        Mode::Encrypt => the_transposition_cipher::encrypt_message(config.key, &content.trim()),
+        Mode::Decrypt => the_transposition_cipher::decrypt_message(config.key, &content.trim()),
     };
 
     println!("{translated}");
